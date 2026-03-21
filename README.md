@@ -82,3 +82,6 @@ When validation fails or a resource is not found, the API returns a structured J
   "error": "Valid full name and email are required"
 }
 ```
+
+# SENG-384
+>>>>>>> d49b3d4f1e9246ebfba20f2ddd767d944a1dcde7
