@@ -17,8 +17,9 @@ FROM nginx:alpine
 # Copy built assets from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Add custom Nginx configuration to handle React routing and port mapping if needed
-# A default nginx.conf is okay, but we will expose port 80 and let docker-compose map it to 3000
+# Add custom Nginx configuration to handle React routing for SPA
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 
 # Start Nginx
